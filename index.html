@@ -508,6 +508,81 @@
 
   .tag.hot { background: rgba(192,97,58,0.1); color: var(--terracotta); }
   .tag.tip { background: rgba(212,168,83,0.15); color: #8a6a1a; }
+
+  /* TRIP INFORMATION STYLES */
+  .subsection {
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(26,42,53,0.08);
+  }
+
+  .subsection:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  .subsection h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .subsection h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--deep);
+    margin: 24px 0 12px 0;
+  }
+
+  .subsection ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+  }
+
+  .subsection li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  .subsection li strong {
+    color: var(--deep);
+    font-weight: 500;
+  }
+
+  .trip-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+
+  .trip-table th,
+  .trip-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid rgba(26,42,53,0.1);
+  }
+
+  .trip-table th {
+    background: var(--deep);
+    color: white;
+    font-weight: 500;
+  }
+
+  .trip-table tr:nth-child(even) {
+    background: rgba(245,237,224,0.35);
+  }
+
+  .trip-table tr:hover {
+    background: rgba(46,110,142,0.05);
+  }
 </style>
 </head>
 <body>
@@ -529,6 +604,7 @@
   <a class="nav-pill" href="#language">Key Phrases</a>
   <a class="nav-pill" href="#getting-around">Getting Around</a>
   <a class="nav-pill" href="#safety">Safety</a>
+  <a class="nav-pill" href="#trip-info">Trip Information</a>
 </div>
 
 <div class="page">
@@ -1046,6 +1122,351 @@
           <li>Walking alone late at night in poorly lit or unfamiliar areas</li>
         </ul>
       </div>
+    </div>
+  </div>
+
+  <!-- ===== TRIP INFORMATION ===== -->
+  <div class="section" id="trip-info">
+    <div class="section-header">
+      <div class="section-icon icon-deep">💍</div>
+      <div>
+        <div class="section-title">Trip Information</div>
+        <div class="section-num">Wedding Weekend & Travel Details</div>
+      </div>
+    </div>
+
+    <!-- The Wedding -->
+    <div class="subsection">
+      <h3>💍 The Wedding — Alondra & Keane</h3>
+      <blockquote style="font-style: italic; color: var(--ocean); margin: 16px 0; padding: 16px; background: rgba(46,110,142,0.05); border-left: 3px solid var(--ocean);">
+        "Although we've already tied the knot, we'd be honored to celebrate with you." — A & K
+      </blockquote>
+      <p class="prose">Keane and Alondra exchanged vows in a private elopement in the Valley of the Gods, Utah. Now they're inviting all family and friends for a full ceremonial celebration in Mallorca, Spain!</p>
+      <ul style="margin: 16px 0;">
+        <li><strong>Ceremony Date:</strong> Friday, June 26, 2026</li>
+        <li><strong>Celebration Type:</strong> Ceremonial wedding weekend</li>
+        <li><strong>Location:</strong> Mallorca, Spain (Balearic Islands, Mediterranean Sea)</li>
+        <li><strong>Dress Code:</strong> No formal dress code — dress comfortably and celebrate!</li>
+        <li><strong>Weather:</strong> Expect 75–85°F (24–29°C) during the day. Bring a light jacket for cooler evenings.</li>
+        <li><strong>Food & Drinks:</strong> All wedding events include meals and refreshments. Let the couple know of any dietary restrictions.</li>
+        <li><strong>Wedding Website:</strong> <a href="https://www.alondrakeane.com" target="_blank">alondrakeane.com</a></li>
+        <li><strong>Questions?</strong> Contact Ali: 480-414-7625 · Keane: 602-505-4732</li>
+      </ul>
+    </div>
+
+    <!-- Wedding Weekend Schedule -->
+    <div class="subsection">
+      <h3>📅 Wedding Weekend Schedule</h3>
+      <table class="trip-table" style="width: 100%; margin: 16px 0; border-collapse: collapse;">
+        <thead>
+          <tr style="background: var(--deep); color: white;">
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Date</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Day</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Event</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Thursday, June 25</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Day 1</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🎉 Welcome Party</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Friday, June 26</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Day 2</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">💍 Ceremonial Wedding — Finca Son Vila</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Saturday, June 27</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Day 3</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🧗 Deep Water Solo Climbing · 🥂 Farewell Pool Brunch</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Wedding Venue -->
+    <div class="subsection">
+      <h3>🏛️ Wedding Venue — Finca Son Vila, Pollença</h3>
+      <ul style="margin: 16px 0;">
+        <li><strong>Venue Name:</strong> Finca Son Vila</li>
+        <li><strong>Address:</strong> Crta. Palma-Pollença, KM.45, 9, 07460 Pollença, Balearic Islands, Spain</li>
+        <li><strong>Town:</strong> Pollença — northern Mallorca, known for cobblestone streets, mountain views, and quiet beauty</li>
+        <li><strong>Setting:</strong> Surrounded by olive groves, rugged coastline, and crystal-clear Mediterranean waters</li>
+        <li><strong>Distance from Airport (PMI):</strong> Approximately 55–60 km north of Palma (~1 hour drive)</li>
+        <li><strong>About Mallorca:</strong> Largest of Spain's Balearic Islands · ~45 miles wide, ~60 miles long · Drive coast to coast in ~1.5–2 hours</li>
+      </ul>
+    </div>
+
+    <!-- Group Villa -->
+    <div class="subsection">
+      <h3>🏡 Group Villa — León de Sineu</h3>
+      <p class="prose">The group is staying together at a stunning private villa in the heart of Mallorca for the wedding weekend.</p>
+      <ul style="margin: 16px 0;">
+        <li><strong>Property:</strong> León de Sineu</li>
+        <li><strong>Type:</strong> Entire villa — Sineu, Spain (interior of Mallorca)</li>
+        <li><strong>Capacity:</strong> 16+ guests · 10 bedrooms · 11 beds · 10 baths</li>
+        <li><strong>Rating:</strong> ⭐ 4.64 · 25 reviews</li>
+        <li><strong>Host:</strong> ISholidays</li>
+      </ul>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Bedroom Assignments</h4>
+      <table class="trip-table" style="width: 100%; margin: 16px 0; border-collapse: collapse;">
+        <thead>
+          <tr style="background: var(--deep); color: white;">
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Bedroom</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Bed Type</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Guests</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #1</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">1 double + 1 single</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Elena, Deni, Taylor Scott</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #2</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">1 double</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Andy & Lindsay</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #3</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">1 double</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Adam & Adriana</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #4</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">1 double</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Gabi & Khoi</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #5</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">1 double</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Morgan & Cam</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #6</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">1 double</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bobbi & Dale</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #7</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">2 singles</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Woody & +1</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #8</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">2 singles</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Gabi & Bernardo</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #9</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">2 singles</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Yasmin & Greg</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Bedroom #10</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">1 double</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Ali & Keane</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin: 16px 0; font-weight: 500;"><strong>Guest List (21 total):</strong> Andy, Lindsay, Lindsay's brother (Woody), Woody's +1, Adriana, Adam, Gabi, Khoi, Elena, Deni, Morgan, Cam, Bobbi, Dale, Alondra, Keane, Taylor Scott, Gabi, Bernardo, Yasmin, Greg (Yasmin's +1)</p>
+    </div>
+
+    <!-- Deep Water Solo Climbing -->
+    <div class="subsection">
+      <h3>🧗 Day-After Activity — Deep Water Solo Climbing (June 27, 2026)</h3>
+      <p class="prose">Deep Water Solo (DWS) is free solo rock climbing on seaside cliffs with no ropes or harness — you fall, you swim. Mallorca is one of the world's premier DWS destinations, with famous spots like Cala Barques and Es Pontàs.</p>
+      <ul style="margin: 16px 0;">
+        <li><strong>Date:</strong> Saturday, June 27, 2026 (day after the wedding)</li>
+        <li><strong>Location:</strong> Mallorca sea cliffs — TBD (confirm specific cove/operator with group)</li>
+        <li><strong>Type:</strong> Free solo climbing above open water — suitable for all skill levels</li>
+        <li><strong>What to bring:</strong> Swimwear, water/approach shoes, sunscreen, water, sense of adventure</li>
+        <li><strong>What to expect:</strong> Climb natural limestone sea cliffs and leap into the crystal-clear Mediterranean</li>
+        <li><strong>Operator/Booking:</strong> <em>(Add guide company and booking link once confirmed)</em></li>
+        <li><strong>Also on June 27:</strong> 🥂 Farewell Pool Brunch with the wedding group</li>
+      </ul>
+    </div>
+
+    <!-- Flights -->
+    <div class="subsection">
+      <h3>✈️ Flights — Andy & Lindsay</h3>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Flight 1 — Newark → London (Outbound)</h4>
+      <ul style="margin: 8px 0;">
+        <li><strong>Airline:</strong> United Airlines · <strong>Flight:</strong> UA 146</li>
+        <li><strong>Date:</strong> Monday, June 22, 2026</li>
+        <li><strong>Departs:</strong> 10:00 PM — Newark Liberty (EWR), Terminal C</li>
+        <li><strong>Arrives:</strong> 10:25 AM (+1 day, Jun 23) — London Heathrow (LHR), Terminal 2</li>
+        <li><strong>Duration:</strong> 7h 25m non-stop · Boeing 767-300 · Economy</li>
+        <li><strong>Seats:</strong> 43D (Lyndsay) & 43E (Andrew)</li>
+        <li><strong>Confirmation:</strong> PQWM90</li>
+      </ul>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Flight 2 — London → Mallorca</h4>
+      <ul style="margin: 8px 0;">
+        <li><strong>Airline:</strong> British Airways · <strong>Flight:</strong> BA 496</li>
+        <li><strong>Date:</strong> Wednesday, June 24, 2026</li>
+        <li><strong>Departs:</strong> 3:50 PM — London Heathrow (LHR), Terminal 5</li>
+        <li><strong>Arrives:</strong> 7:25 PM — Palma de Mallorca Airport (PMI)</li>
+        <li><strong>Duration:</strong> 2h 35m non-stop · Airbus A320 · Economy</li>
+        <li><strong>Seats:</strong> Assigned at check-in</li>
+        <li><strong>Confirmation:</strong> APVZW3</li>
+      </ul>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Flight 3 — Mallorca → Newark (Return)</h4>
+      <ul style="margin: 8px 0;">
+        <li><strong>Airline:</strong> United Airlines · <strong>Flight:</strong> UA 237</li>
+        <li><strong>Date:</strong> Tuesday, June 30, 2026</li>
+        <li><strong>Departs:</strong> 10:00 AM — Palma de Mallorca Airport (PMI)</li>
+        <li><strong>Arrives:</strong> 1:05 PM — Newark Liberty (EWR), Terminal C</li>
+        <li><strong>Duration:</strong> 9h 5m non-stop · Boeing 767-400 · Economy</li>
+        <li><strong>Seats:</strong> 50A (Lyndsay) & 50B (Andrew)</li>
+        <li><strong>Confirmation:</strong> PQWM90</li>
+      </ul>
+    </div>
+
+    <!-- Hotels -->
+    <div class="subsection">
+      <h3>🏨 Hotels — Andy & Lindsay</h3>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">London (Night of June 23)</h4>
+      <ul style="margin: 8px 0;">
+        <li><strong>Hotel:</strong> Park Plaza London Westminster Bridge</li>
+        <li><strong>Location:</strong> Central London, near the Thames</li>
+        <li><strong>Room Type:</strong> Superior Room, King Bed (room only)</li>
+        <li><strong>Check-in:</strong> June 23, 2026 · <strong>Check-out:</strong> June 24, 2026</li>
+        <li><strong>Website:</strong> <a href="https://www.parkplazawestminsterbridge.com/gallery/" target="_blank">parkplazawestminsterbridge.com</a></li>
+      </ul>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Mallorca (Night of June 29)</h4>
+      <p class="prose">After the wedding weekend and Deep Water Solo, Andy & Lindsay check into a beachside hotel before flying home.</p>
+      <ul style="margin: 8px 0;">
+        <li><strong>Hotel:</strong> Iberostar Selection Playa de Palma</li>
+        <li><strong>Address:</strong> 36 Carrer de Marbella, Palma, Mallorca, Spain, 07610</li>
+        <li><strong>Room Type:</strong> Junior Suite, Queen Bed, Pool View</li>
+        <li><strong>Includes:</strong> Breakfast & Dinner</li>
+        <li><strong>Check-in:</strong> June 29, 2026 · <strong>Check-out:</strong> June 30, 2026</li>
+        <li><strong>Booking Reference:</strong> Classic Vacations Booking #13125257</li>
+        <li><strong>Website:</strong> <a href="https://www.iberostar.com/en/hotels/majorca/iberostar-selection-playa-de-palma/" target="_blank">iberostar.com</a></li>
+      </ul>
+    </div>
+
+    <!-- Transportation -->
+    <div class="subsection">
+      <h3>🚗 Transportation — Andy & Lindsay</h3>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Transfer 1 — London: Heathrow → Hotel (Jun 23)</h4>
+      <ul style="margin: 8px 0;">
+        <li><strong>Type:</strong> Private Transfer · <strong>Route:</strong> LHR → Park Plaza Westminster Bridge</li>
+        <li><strong>Date:</strong> June 23, 2026 (after UA 146 arrives at 10:25 AM)</li>
+        <li><strong>Notes:</strong> Tolls & taxes included. Arranged via World Travel, Inc.</li>
+      </ul>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Transfer 2 — London: Hotel → Heathrow (Jun 24)</h4>
+      <ul style="margin: 8px 0;">
+        <li><strong>Type:</strong> Private Transfer · <strong>Route:</strong> Park Plaza Westminster Bridge → LHR Terminal 5</li>
+        <li><strong>Date:</strong> June 24, 2026 (for BA 496 at 3:50 PM)</li>
+        <li><strong>Notes:</strong> Tolls & taxes included. Arranged via World Travel, Inc.</li>
+      </ul>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Transfer 3 — Mallorca: Hotel → Palma Airport (Jun 30)</h4>
+      <ul style="margin: 8px 0;">
+        <li><strong>Type:</strong> Private Transfer (one-way)</li>
+        <li><strong>Route:</strong> Iberostar Selection Playa de Palma → Palma Airport (PMI)</li>
+        <li><strong>Pickup:</strong> June 30, 2026 at <strong>7:00 AM</strong> from hotel reception</li>
+        <li><strong>Drop-off:</strong> PMI — for UA 237 departing 10:00 AM · Duration: ~15 min</li>
+        <li><strong>Vehicle:</strong> Private Standard Car (max 3 pax / max 3 bags)</li>
+        <li><strong>Booking Ref:</strong> PE169486806 (Project Expedition) · Transfer Ref: PREXP-28593107</li>
+        <li><strong>Find Your Driver:</strong> <a href="https://checkpickup.com/AHSEEC" target="_blank">checkpickup.com/AHSEEC</a></li>
+        <li><strong>Local Operator:</strong> +34 971 578 312</li>
+        <li><strong>Status:</strong> ✅ Confirmed & Fully Paid ($81.98)</li>
+        <li style="color: var(--terracotta); font-weight: 500;"><strong>⚠️ Important:</strong> Be at reception 10–15 min early. Show voucher to driver.</li>
+      </ul>
+
+      <h4 style="margin: 24px 0 12px 0; color: var(--deep);">Getting Around Mallorca (General Tips)</h4>
+      <ul style="margin: 8px 0;">
+        <li><strong>Airport (PMI):</strong> ~8 km from Palma city center (~20 min)</li>
+        <li><strong>A1 Bus:</strong> Airport → Central Palma in ~20 min for ~€5</li>
+        <li><strong>Taxis & Rental Cars:</strong> Most convenient options for getting around the island</li>
+        <li><strong>Uber:</strong> Available but less common than traditional taxis</li>
+        <li><strong>Island Size:</strong> ~45 miles wide × 60 miles long — easy to explore; coast-to-coast in ~1.5–2 hours</li>
+      </ul>
+    </div>
+
+    <!-- Full Trip Timeline -->
+    <div class="subsection">
+      <h3>📅 Full Trip Timeline — Andy & Lindsay</h3>
+      <table class="trip-table" style="width: 100%; margin: 16px 0; border-collapse: collapse;">
+        <thead>
+          <tr style="background: var(--deep); color: white;">
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Date</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Day</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid rgba(255,255,255,0.1);">Event</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 22</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Monday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">✈️ Depart EWR 10:00 PM on UA 146</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 23</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Tuesday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🛬 Arrive LHR 10:25 AM · Private transfer → Park Plaza Westminster</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 24</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Wednesday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🚗 Transfer to Heathrow · ✈️ BA 496 departs 3:50 PM → Arrives PMI 7:25 PM</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 25</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Thursday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🎉 Welcome Party — León de Sineu villa, Sineu</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 26</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Friday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">💍 Ceremonial Wedding — Finca Son Vila, Pollença</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 27</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Saturday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🧗 Deep Water Solo Climbing · 🥂 Farewell Pool Brunch</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 28</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Sunday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🌴 Free day / travel toward Palma area</td>
+          </tr>
+          <tr style="background: rgba(245,237,224,0.35);">
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 29</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Monday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🏨 Check in: Iberostar Selection Playa de Palma</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Jun 30</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">Tuesday</td>
+            <td style="padding: 12px; border: 1px solid rgba(26,42,53,0.1);">🚗 Transfer to PMI at 7:00 AM · ✈️ UA 237 departs 10:00 AM · 🛬 Arrive EWR 1:05 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Travel Agent Contact -->
+    <div class="subsection">
+      <h3>📋 Travel Agent Contact</h3>
+      <ul style="margin: 16px 0;">
+        <li><strong>Agent:</strong> Dennis Cantwell — World Travel, Inc.</li>
+        <li><strong>Direct Phone:</strong> (484) 948-2743</li>
+        <li><strong>Emergency (24/7, US):</strong> 800-341-2014</li>
+        <li><strong>Emergency (International):</strong> 610-327-9000</li>
+      </ul>
     </div>
   </div>
 
