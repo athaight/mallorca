@@ -1,0 +1,13 @@
+{
+  "name": "mallorca",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static Mallorca travel guide site",
+  "scripts": {
+    "start": "npx http-server . -c-1 8080",
+    "serve": "npm run start"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

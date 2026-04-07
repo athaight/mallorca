@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mallorca Travel Guide — June 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #f5ede0;
+    --deep: #1a2a35;
+    --ocean: #2e6e8e;
+    --terracotta: #c0613a;
+    --gold: #d4a853;
+    --sage: #7a9e8a;
+    --cream: #fdf8f2;
+    --muted: #7a7066;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--deep);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--deep);
+    color: white;
+    padding: 72px 40px 60px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 60%, rgba(46,110,142,0.4) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 30%, rgba(192,97,58,0.25) 0%, transparent 45%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 62px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 1px;
+    margin-top: 16px;
+    position: relative;
+  }
+
+  .hero-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    margin: 24px auto 0;
+    position: relative;
+  }
+
+  /* NAV PILLS */
+  .nav-pills {
+    background: var(--deep);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 16px 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-pill {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .nav-pill:hover {
+    color: white;
+    border-color: var(--gold);
+    background: rgba(212,168,83,0.12);
+  }
+
+  /* LAYOUT */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* SECTION */
+  .section {
+    margin-top: 64px;
+    scroll-margin-top: 24px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(26,42,53,0.12);
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .icon-sand { background: rgba(212,168,83,0.15); }
+  .icon-ocean { background: rgba(46,110,142,0.12); }
+  .icon-terra { background: rgba(192,97,58,0.12); }
+  .icon-sage { background: rgba(122,158,138,0.15); }
+  .icon-deep { background: rgba(26,42,53,0.08); }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--deep);
+    line-height: 1.2;
+  }
+
+  .section-num {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ALERT BOX */
+  .alert {
+    border-left: 3px solid var(--terracotta);
+    background: rgba(192,97,58,0.07);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 13.5px;
+  }
+
+  .alert strong {
+    display: block;
+    font-weight: 500;
+    color: var(--terracotta);
+    margin-bottom: 4px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .alert-ocean {
+    border-left-color: var(--ocean);
+    background: rgba(46,110,142,0.07);
+  }
+
+  .alert-ocean strong { color: var(--ocean); }
+
+  .alert-sage {
+    border-left-color: var(--sage);
+    background: rgba(122,158,138,0.08);
+  }
+
+  .alert-sage strong { color: var(--sage); }
+
+  /* CHECKLIST */
+  .checklist {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: white;
+    border: 1px solid rgba(26,42,53,0.08);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .check-item:hover { border-color: var(--ocean); }
+
+  .check-item.checked {
+    border-color: var(--sage);
+    background: rgba(122,158,138,0.05);
+  }
+
+  .check-item.checked .check-box {
+    background: var(--sage);
+    border-color: var(--sage);
+  }
+
+  .check-item.checked .check-box::after {
+    content: '✓';
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .check-item.checked .check-text {
+    text-decoration: line-through;
+    color: var(--muted);
+  }
+
+  .check-box {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(26,42,53,0.2);
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .check-text { flex: 1; line-height: 1.45; }
+  .check-text small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+  /* DO / DON'T GRID */
+  .dos-donts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  @media (max-width: 600px) {
+    .dos-donts { grid-template-columns: 1fr; }
+  }
+
+  .do-col, .dont-col {
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid transparent;
+  }
+
+  .do-col {
+    background: rgba(122,158,138,0.08);
+    border-color: rgba(122,158,138,0.25);
+  }
+
+  .dont-col {
+    background: rgba(192,97,58,0.07);
+    border-color: rgba(192,97,58,0.2);
+  }
+
+  .col-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .do-col .col-label { color: var(--sage); }
+  .dont-col .col-label { color: var(--terracotta); }
+
+  .rule-list { list-style: none; display: grid; gap: 9px; }
+
+  .rule-list li {
+    font-size: 13.5px;
+    line-height: 1.45;
+    display: flex;
+    gap: 8px;
+  }
+
+  .rule-list li::before {
+    flex-shrink: 0;
+    font-size: 14px;
+    margin-top: 1px;
+  }
+
+  .do-col .rule-list li::before { content: '→'; color: var(--sage); }
+  .dont-col .rule-list li::before { content: '✕'; color: var(--terracotta); }
+
+  /* TIP CARDS */
+  .tip-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+
+  .tip-card {
+    background: white;
+    border: 1px solid rgba(26,42,53,0.1);
+    border-radius: 12px;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tip-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--ocean);
+  }
+
+  .tip-card.terra::before { background: var(--terracotta); }
+  .tip-card.gold::before { background: var(--gold); }
+  .tip-card.sage::before { background: var(--sage); }
+
+  .tip-card-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ocean);
+    margin-bottom: 8px;
+  }
+
+  .tip-card.terra .tip-card-label { color: var(--terracotta); }
+  .tip-card.gold .tip-card-label { color: #b8862a; }
+  .tip-card.sage .tip-card-label { color: var(--sage); }
+
+  .tip-card p { font-size: 13.5px; line-height: 1.55; color: var(--deep); }
+
+  /* PHRASE TABLE */
+  .phrase-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+
+  .phrase-table th {
+    text-align: left;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 10px 16px;
+    background: var(--sand);
+    border-bottom: 1px solid rgba(26,42,53,0.1);
+  }
+
+  .phrase-table th:first-child { border-radius: 8px 0 0 0; }
+  .phrase-table th:last-child { border-radius: 0 8px 0 0; }
+
+  .phrase-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(26,42,53,0.06);
+    vertical-align: top;
+  }
+
+  .phrase-table tr:last-child td { border-bottom: none; }
+  .phrase-table tr:nth-child(even) td { background: rgba(245,237,224,0.35); }
+
+  .phrase-table td:first-child { font-style: italic; color: var(--ocean); font-weight: 400; }
+  .phrase-table td:nth-child(2) { color: var(--muted); font-size: 12px; }
+  .phrase-table td:last-child { font-size: 13px; }
+
+  /* TIP AMOUNTS */
+  .tip-amounts {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .tip-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid rgba(26,42,53,0.08);
+    border-radius: 10px;
+  }
+
+  .tip-emoji { font-size: 18px; flex-shrink: 0; }
+
+  .tip-context { flex: 1; }
+  .tip-context strong { font-weight: 500; display: block; font-size: 14px; }
+  .tip-context span { font-size: 12.5px; color: var(--muted); }
+
+  .tip-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ocean);
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  .guide-footer {
+    margin-top: 72px;
+    background: var(--deep);
+    border-radius: 16px;
+    padding: 40px;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .guide-footer h3 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+    text-align: left;
+  }
+
+  .emergency-card {
+    background: rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 14px;
+  }
+
+  .emergency-card strong {
+    display: block;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .emergency-card span { font-size: 13px; color: rgba(255,255,255,0.85); }
+
+  /* PROSE */
+  .prose { font-size: 14.5px; line-height: 1.75; color: #3a3028; margin-bottom: 20px; }
+  .prose + .prose { margin-top: -8px; }
+
+  strong { font-weight: 500; }
+
+  /* TAG */
+  .tag {
+    display: inline-block;
+    background: rgba(46,110,142,0.1);
+    color: var(--ocean);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  .tag.hot { background: rgba(192,97,58,0.1); color: var(--terracotta); }
+  .tag.tip { background: rgba(212,168,83,0.15); color: #8a6a1a; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">Your Complete Travel Guide</div>
+  <h1>Mallorca, <em>done right.</em></h1>
+  <div class="hero-sub">June 29 – July 1 · Playa de Palma · For Americans who want to not stick out</div>
+  <div class="hero-divider"></div>
+</div>
+
+<div class="nav-pills">
+  <a class="nav-pill" href="#before">Before You Go</a>
+  <a class="nav-pill" href="#packing">What to Pack</a>
+  <a class="nav-pill" href="#culture">Culture & Etiquette</a>
+  <a class="nav-pill" href="#dress">Dress Code</a>
+  <a class="nav-pill" href="#dining">Dining Rules</a>
+  <a class="nav-pill" href="#tipping">Tipping</a>
+  <a class="nav-pill" href="#language">Key Phrases</a>
+  <a class="nav-pill" href="#getting-around">Getting Around</a>
+  <a class="nav-pill" href="#safety">Safety</a>
+</div>
+
+<div class="page">
+
+  <!-- ===== BEFORE YOU GO ===== -->
+  <div class="section" id="before">
+    <div class="section-header">
+      <div class="section-icon icon-sand">📋</div>
+      <div>
+        <div class="section-title">Before You Go</div>
+        <div class="section-num">Government Registration & Documents</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <strong>Action Required</strong>
+      Spain is currently rated <strong>Level 2: Exercise Increased Caution</strong> by the U.S. State Department. Register your trip before you leave. It's free, takes 5 minutes, and means the Embassy can reach you in an emergency.
+    </div>
+
+    <p class="prose">The <strong>Smart Traveler Enrollment Program (STEP)</strong> is a free service from the U.S. Department of State that lets you register your trip with the nearest embassy. In a natural disaster, civil emergency, or family crisis, they can contact you — or your emergency contacts can locate you through them. No downside to signing up.</p>
+
+    <div class="checklist" id="pre-trip-checklist">
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Register at <strong>step.state.gov</strong> and add Spain as your destination with your exact travel dates
+          <small>Free · Takes 5 minutes · The embassy will email you if anything changes</small>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Check passport expiration — Spain requires at least <strong>3 months validity</strong> beyond your departure date
+          <small>Ideally 6 months of validity remaining</small>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Notify your bank and credit cards you're traveling to Spain
+          <small>Prevents your card from being frozen mid-trip</small>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Get travel insurance — not just for emergencies, but medical coverage
+          <small>U.S. health insurance typically does not cover you abroad</small>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Download the <strong>Google Translate</strong> app and pre-download Spanish for offline use
+          <small>Also useful: Maps.me or download Google Maps offline for Mallorca</small>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Consider an <strong>eSIM or international plan</strong> — a Airalo Spain eSIM runs ~$10 for 30 days
+          <small>Much cheaper than carrier international day passes</small>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Get a <strong>Type F plug adapter</strong> (round two-pronged European plug)
+          <small>Spain uses 220V — bring a converter if your devices don't support it</small>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Photograph your passport, insurance cards, hotel confirmation, and store them in cloud storage
+          <small>Email them to yourself as a backup</small>
+        </div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text">
+          Take out some <strong>Euro cash</strong> before or at the airport
+          <small>Have small bills and coins — useful for tipping, taxis, and small shops</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PACKING ===== -->
+  <div class="section" id="packing">
+    <div class="section-header">
+      <div class="section-icon icon-gold">🧳</div>
+      <div>
+        <div class="section-title">What to Pack</div>
+        <div class="section-num">Essentials checklist — late June weather is hot (85–95°F)</div>
+      </div>
+    </div>
+
+    <div class="alert alert-ocean">
+      <strong>Weather Note</strong>
+      Late June in Mallorca is peak summer — expect 85–95°F (30–35°C), full sun, and low humidity. Pack light, breathable fabrics. The Mediterranean sun is intense and burns fast.
+    </div>
+
+    <div class="checklist">
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>High-SPF sunscreen</strong> — SPF 50+ and reef-safe<small>Pack enough; European pharmacy sunscreen is fine but pricier</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>Lightweight, breathable clothing</strong> — linen, cotton, light synthetics<small>Think resort-casual, not gym clothes. More on dress code below.</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>One "smart casual" dinner outfit</strong> — light trousers/dress, closed shoes<small>Iberostar specifically requires long trousers and closed shoes for dinner</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>Comfortable walking sandals AND sneakers</strong><small>Cobblestones in Old Town Palma are brutal in flip flops</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>Beach bag / day tote</strong> — no hiking packs at restaurants<small>A simple canvas or leather bag reads way more local</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>Reusable water bottle</strong><small>Tap water is safe in Palma but has a mineral taste — most locals buy bottled</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>Light scarf or cover-up</strong><small>Needed if you visit any church or religious site (shoulders + knees covered)</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>Small crossbody bag / anti-theft bag</strong><small>Pickpocketing exists in tourist areas — don't wear a backpack loosely</small></div>
+      </div>
+      <div class="check-item" onclick="toggleCheck(this)">
+        <div class="check-box"></div>
+        <div class="check-text"><strong>Prescription medications with original packaging + doctor's note</strong><small>Customs may ask about medications</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CULTURE ===== -->
+  <div class="section" id="culture">
+    <div class="section-header">
+      <div class="section-icon icon-terra">🤝</div>
+      <div>
+        <div class="section-title">Culture & Etiquette</div>
+        <div class="section-num">How not to be that American</div>
+      </div>
+    </div>
+
+    <p class="prose">Mallorca is part of Spain — and while it's one of Europe's most-visited tourist islands, locals have deeply held social customs that differ from American expectations. The biggest shift is <strong>slowing down and tuning in</strong>. Spaniards live life at a more intentional pace and can spot entitlement from a mile away. Good news: a little effort goes a very long way.</p>
+
+    <div class="dos-donts">
+      <div class="do-col">
+        <div class="col-label">✓ Do</div>
+        <ul class="rule-list">
+          <li>Say <em>"Hola"</em> when entering any shop or restaurant and <em>"Gracias"</em> when leaving</li>
+          <li>Greet people warmly — locals appreciate a smile and basic courtesy</li>
+          <li>Match the volume of the room — Spaniards are expressive but not shouters in public</li>
+          <li>Be patient at restaurants — service is intentionally unhurried and that's the point</li>
+          <li>Ask for the check when you're ready — it won't come unless you request it</li>
+          <li>Respect siesta hours (roughly 2–5pm) — some shops close, things slow down</li>
+          <li>Learn a few Spanish phrases — even botching them earns genuine warmth</li>
+          <li>Accept the pace of things: meals are social events, not fuel stops</li>
+          <li>Use two fingers in a café to order two coffees — minimal pointing is fine here</li>
+        </ul>
+      </div>
+      <div class="dont-col">
+        <div class="col-label">✕ Don't</div>
+        <ul class="rule-list">
+          <li>Talk loudly in public, restaurants, or at your hotel — it's the #1 American tell</li>
+          <li>Demand things or snap your fingers at waitstaff — genuinely considered rude</li>
+          <li>Expect 24/7 service culture — Spain does not operate on American convenience schedules</li>
+          <li>Show up to dinner at 6 or 7pm — you'll be eating alone; locals eat at 9pm+</li>
+          <li>Wear swimwear or beachwear into restaurants, shops, or off the beach area</li>
+          <li>Take horse-drawn carriage rides — horses often suffer in summer heat</li>
+          <li>Fly a drone over residential areas or private land without checking local rules</li>
+          <li>Assume everyone speaks English — attempt Spanish first, even badly</li>
+          <li>Tip aggressively — it can read as condescending, not generous</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alert alert-sage">
+      <strong>The Greeting Thing</strong>
+      When meeting someone socially in Spain, expect two air kisses — right cheek first. Women do it with everyone; men typically shake hands with other men. Don't panic — if you see it coming, just lean in. It's a warmth thing, not a boundary violation.
+    </div>
+  </div>
+
+  <!-- ===== DRESS ===== -->
+  <div class="section" id="dress">
+    <div class="section-header">
+      <div class="section-icon icon-ocean">👗</div>
+      <div>
+        <div class="section-title">Dress Code</div>
+        <div class="section-num">How to look like you belong</div>
+      </div>
+    </div>
+
+    <p class="prose">Spaniards interpret "casual" very differently than Americans. The key principle: <strong>put-together, not fancy</strong>. You don't need to look like you're going to a wedding — but cargo shorts and a sports jersey will absolutely clock you as a tourist.</p>
+
+    <div class="tip-cards">
+      <div class="tip-card">
+        <div class="tip-card-label">🏖️ Beach</div>
+        <p>Swimwear is appropriate at the beach and pool only. Wrap up with a cover-up and sandals the moment you head toward the promenade, restaurant, or shops.</p>
+      </div>
+      <div class="tip-card terra">
+        <div class="tip-card-label">🍽️ Dining Out</div>
+        <p>Casual linen shirt or blouse, light trousers or a midi dress. Most resort restaurants require long trousers and closed shoes — no flip flops, no tank tops.</p>
+      </div>
+      <div class="tip-card gold">
+        <div class="tip-card-label">🏛️ Palma Old Town</div>
+        <p>You'll walk cobblestones and enter the Cathedral — have shoulders covered. A light scarf doubles as both a church cover and a stylish accessory.</p>
+      </div>
+      <div class="tip-card sage">
+        <div class="tip-card-label">🌆 Day Exploring</div>
+        <p>Neat shorts (not cargo) or chinos, a fitted t-shirt or button-down. Comfortable sneakers. Think "Barcelona brunch" not "theme park."</p>
+      </div>
+    </div>
+
+    <div class="dos-donts">
+      <div class="do-col">
+        <div class="col-label">✓ Good Choices</div>
+        <ul class="rule-list">
+          <li>Linen shirts, light cotton blouses</li>
+          <li>Fitted chinos or lightweight trousers</li>
+          <li>Midi dresses, sundresses with straps</li>
+          <li>Clean leather sandals or loafers</li>
+          <li>Simple structured tote or crossbody bag</li>
+          <li>Sunglasses that aren't aggressively branded</li>
+        </ul>
+      </div>
+      <div class="dont-col">
+        <div class="col-label">✕ Avoid</div>
+        <ul class="rule-list">
+          <li>Cargo shorts, board shorts off the beach</li>
+          <li>Sports jerseys or loud branded gear</li>
+          <li>Flip flops away from the beach</li>
+          <li>Tank tops in restaurants or shops</li>
+          <li>Fanny packs worn visibly (crossbody = fine)</li>
+          <li>Baseball caps indoors or in restaurants</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DINING ===== -->
+  <div class="section" id="dining">
+    <div class="section-header">
+      <div class="section-icon icon-terra">🍷</div>
+      <div>
+        <div class="section-title">Dining Rules</div>
+        <div class="section-num">Meal times, ordering, and local food culture</div>
+      </div>
+    </div>
+
+    <p class="prose">Dining in Spain is a fundamentally different experience than the U.S. It is slow, social, and structured around specific times. Adapt to it and it's one of the best parts of the trip. Fight it and you'll be frustrated.</p>
+
+    <div class="tip-cards">
+      <div class="tip-card">
+        <div class="tip-card-label">⏰ Meal Times</div>
+        <p><strong>Breakfast:</strong> 8–10am. Light — coffee and a pastry.<br><strong>Lunch:</strong> 2–4pm. The main meal of the day.<br><strong>Dinner:</strong> 9–11pm. Locals eat late; tourist spots open at 7pm.</p>
+      </div>
+      <div class="tip-card terra">
+        <div class="tip-card-label">🧾 Getting the Check</div>
+        <p>Your waiter will not bring the check until you ask. Say <em>"La cuenta, por favor"</em> — this is not rude, it's just how it works.</p>
+      </div>
+      <div class="tip-card gold">
+        <div class="tip-card-label">🍞 Free Snacks</div>
+        <p>Aioli, olives, and bread are often brought before your meal — usually free or included. Don't be surprised, just enjoy.</p>
+      </div>
+      <div class="tip-card sage">
+        <div class="tip-card-label">🥘 Eat Local</div>
+        <p>Try <em>pa amb oli</em> (bread with olive oil and tomato), <em>tumbet</em> (vegetable casserole), and fresh seafood. These are distinctly Mallorcan — don't leave without trying them.</p>
+      </div>
+    </div>
+
+    <div class="alert">
+      <strong>Siesta Warning</strong>
+      Some smaller restaurants close between ~2pm and 5pm even if their sign says otherwise. If you get hungry mid-afternoon, your hotel buffet is your best friend. Plan your meals around Spanish times and you won't hit this wall.
+    </div>
+
+    <p class="prose">Many restaurants close on Sundays and Mondays — not just in villages but even in popular areas. If you're planning a specific dinner, check ahead or have a backup. This is especially true if you take a day trip out of Playa de Palma into smaller Mallorcan towns.</p>
+  </div>
+
+  <!-- ===== TIPPING ===== -->
+  <div class="section" id="tipping">
+    <div class="section-header">
+      <div class="section-icon icon-gold">💶</div>
+      <div>
+        <div class="section-title">Tipping Guide</div>
+        <div class="section-num">Modest, optional, always in cash</div>
+      </div>
+    </div>
+
+    <p class="prose"><strong>Tipping in Spain is not mandatory and is never expected the way it is in the US.</strong> Spanish service workers earn a real wage — they don't depend on tips to pay rent. A tip is purely a "thank you for great service," not an obligation. Overtipping can actually feel a bit awkward to locals. When in doubt: round up, leave a few coins, and you're golden.</p>
+
+    <div class="tip-amounts">
+      <div class="tip-row">
+        <div class="tip-emoji">🍽️</div>
+        <div class="tip-context">
+          <strong>Casual restaurant / tapas bar</strong>
+          <span>Round up or leave loose change; not expected at all</span>
+        </div>
+        <div class="tip-amount">€0–2</div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-emoji">🥂</div>
+        <div class="tip-context">
+          <strong>Nice sit-down dinner</strong>
+          <span>For genuinely good service — 5–10% max, always cash</span>
+        </div>
+        <div class="tip-amount">5–10%</div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-emoji">🍸</div>
+        <div class="tip-context">
+          <strong>Bar / cocktails</strong>
+          <span>€1–2 if seated with table service; nothing at the bar counter</span>
+        </div>
+        <div class="tip-amount">€1–2</div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-emoji">🚕</div>
+        <div class="tip-context">
+          <strong>Taxi</strong>
+          <span>Round up to the nearest euro; say "quédese con el cambio"</span>
+        </div>
+        <div class="tip-amount">Round up</div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-emoji">🧳</div>
+        <div class="tip-context">
+          <strong>Hotel porter / bellhop</strong>
+          <span>€1–2 per bag</span>
+        </div>
+        <div class="tip-amount">€1–2/bag</div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-emoji">🛏️</div>
+        <div class="tip-context">
+          <strong>Housekeeping</strong>
+          <span>€2–5 left on the pillow at the end of your stay</span>
+        </div>
+        <div class="tip-amount">€2–5</div>
+      </div>
+      <div class="tip-row">
+        <div class="tip-emoji">🗺️</div>
+        <div class="tip-context">
+          <strong>Tour guide</strong>
+          <span>Group tour: €5–10/person; private: €10–20 total for a half day</span>
+        </div>
+        <div class="tip-amount">€5–20</div>
+      </div>
+    </div>
+
+    <div class="alert alert-ocean">
+      <strong>Always Tip in Cash</strong>
+      Tips added to a credit card often don't reach the server — they may go to the house. Carry small Euro bills and coins specifically for this. Some bills will include a line that says "tip not included" — this is a tourist-targeting tactic; you are under no obligation.
+    </div>
+  </div>
+
+  <!-- ===== LANGUAGE ===== -->
+  <div class="section" id="language">
+    <div class="section-header">
+      <div class="section-icon icon-sage">💬</div>
+      <div>
+        <div class="section-title">Key Phrases</div>
+        <div class="section-num">Spanish — Mallorca also uses Mallorquí (a Catalan dialect)</div>
+      </div>
+    </div>
+
+    <p class="prose">English is widely understood in the resort and tourist areas of Playa de Palma. But making the effort to use even basic Spanish is noticed and appreciated — and genuinely opens doors. You'll be greeted with much more warmth if you try. Locals speak both Spanish (<em>Castellano</em>) and Mallorquí — don't be confused by bilingual street signs.</p>
+
+    <table class="phrase-table">
+      <thead>
+        <tr>
+          <th>Spanish</th>
+          <th>Pronunciation (loose)</th>
+          <th>When to use it</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hola / Buenos días</td>
+          <td>OH-la / BWEN-os DEE-as</td>
+          <td>Greeting when entering anywhere</td>
+        </tr>
+        <tr>
+          <td>Por favor</td>
+          <td>por fah-VOR</td>
+          <td>Please — use constantly</td>
+        </tr>
+        <tr>
+          <td>Gracias</td>
+          <td>GRAH-thee-as</td>
+          <td>Thank you — also use constantly</td>
+        </tr>
+        <tr>
+          <td>¿Habla inglés?</td>
+          <td>AH-bla in-GLES</td>
+          <td>"Do you speak English?" — ask first, don't assume</td>
+        </tr>
+        <tr>
+          <td>La cuenta, por favor</td>
+          <td>la KWEN-ta, por fah-VOR</td>
+          <td>The check, please</td>
+        </tr>
+        <tr>
+          <td>Una mesa para dos</td>
+          <td>OO-na MAY-sa PAH-ra dos</td>
+          <td>"A table for two" at a restaurant</td>
+        </tr>
+        <tr>
+          <td>¿Dónde está…?</td>
+          <td>DON-day es-TAH</td>
+          <td>"Where is…?" — useful everywhere</td>
+        </tr>
+        <tr>
+          <td>Quédese con el cambio</td>
+          <td>KAY-des-ay con el KAM-bee-o</td>
+          <td>"Keep the change" — for taxis, tips</td>
+        </tr>
+        <tr>
+          <td>No hablo español</td>
+          <td>no AH-blo es-pan-YOL</td>
+          <td>"I don't speak Spanish" — opens doors anyway</td>
+        </tr>
+        <tr>
+          <td>Perdona / Disculpe</td>
+          <td>pehr-DOH-na / dis-KOOL-pay</td>
+          <td>Excuse me (passing someone / getting attention)</td>
+        </tr>
+        <tr>
+          <td>¡Salud!</td>
+          <td>sah-LOOD</td>
+          <td>Cheers! — when toasting drinks</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== GETTING AROUND ===== -->
+  <div class="section" id="getting-around">
+    <div class="section-header">
+      <div class="section-icon icon-deep">🚌</div>
+      <div>
+        <div class="section-title">Getting Around</div>
+        <div class="section-num">Taxis, buses, and what to know about Uber</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <strong>No Uber in Mallorca</strong>
+      Uber and Lyft are not available in Mallorca or the rest of Spain (Cabify operates in some mainland cities, but not reliably on the island). Use metered taxis — they're readily available and line up at the airport arrivals area.
+    </div>
+
+    <div class="tip-cards">
+      <div class="tip-card">
+        <div class="tip-card-label">✈️ Airport → Hotel</div>
+        <p>Taxis are lined up at Palma Airport (PMI). The ride to Playa de Palma takes about <strong>10–15 minutes</strong> and costs roughly <strong>€15–22</strong>. Agree on the fare or confirm the meter is running.</p>
+      </div>
+      <div class="tip-card terra">
+        <div class="tip-card-label">🚌 Local Bus</div>
+        <p>Bus stops run directly outside most hotels to Palma city center — about 15–20 min for <strong>€2 flat fare</strong>. EMT Palma is the city operator. Easy and cheap for day trips into Old Town.</p>
+      </div>
+      <div class="tip-card gold">
+        <div class="tip-card-label">🚶 On Foot</div>
+        <p>Playa de Palma is walkable along the beachfront promenade. Getting around between Balneario points (beach sections) is totally doable on foot or by renting a bike from your hotel.</p>
+      </div>
+      <div class="tip-card sage">
+        <div class="tip-card-label">🚗 Renting a Car</div>
+        <p>If you want to explore the island beyond Palma, renting a car unlocks everything. Scenic mountain roads, hidden coves, small villages. International Driver's License recommended but not always required.</p>
+      </div>
+    </div>
+
+    <p class="prose">Always carry some cash for taxis — while most registered cabs take cards, smaller operators may not. If using a taxi, you can always say <em>"quédese con el cambio"</em> to leave the change as a tip when paying cash. Have your hotel address written down or saved in your phone to show drivers.</p>
+  </div>
+
+  <!-- ===== SAFETY ===== -->
+  <div class="section" id="safety">
+    <div class="section-header">
+      <div class="section-icon icon-terra">🛡️</div>
+      <div>
+        <div class="section-title">Safety & Smart Habits</div>
+        <div class="section-num">Common sense + Spain-specific stuff</div>
+      </div>
+    </div>
+
+    <p class="prose">Mallorca and Palma are very safe for tourists overall — especially at beach resorts. The main risks are pickpocketing in crowded areas, tourist scams, and the kind of trouble that comes from drinking in unfamiliar party zones. Use common sense and you'll be fine.</p>
+
+    <div class="dos-donts">
+      <div class="do-col">
+        <div class="col-label">✓ Smart Habits</div>
+        <ul class="rule-list">
+          <li>Keep your bag in front of you in crowded markets and promenades</li>
+          <li>Use a hotel safe for passports, extra cash, and cards you don't need</li>
+          <li>Only carry the cash and cards you need for the day</li>
+          <li>Photograph the menu or note the restaurant's address before you enter</li>
+          <li>Be skeptical of anyone approaching you unsolicited to "help"</li>
+          <li>Save emergency numbers in your phone before arriving</li>
+        </ul>
+      </div>
+      <div class="dont-col">
+        <div class="col-label">✕ Avoid</div>
+        <ul class="rule-list">
+          <li>Leaving bags or valuables unattended at the beach (even briefly)</li>
+          <li>Wearing flashy jewelry or showing expensive gear in busy areas</li>
+          <li>Accepting drinks from strangers you don't know in bar areas</li>
+          <li>Trusting unofficial "tour guides" who approach you on the street</li>
+          <li>Giving money to anyone claiming to be a U.S. military person in trouble (scam)</li>
+          <li>Walking alone late at night in poorly lit or unfamiliar areas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="guide-footer">
+    <h3>Emergency Numbers & Contacts</h3>
+    <p>Save these before you leave. Spain uses the EU emergency number 112 for all emergencies.</p>
+    <div class="emergency-grid">
+      <div class="emergency-card">
+        <strong>All Emergencies (EU)</strong>
+        <span>112</span>
+      </div>
+      <div class="emergency-card">
+        <strong>Spain Police</strong>
+        <span>091</span>
+      </div>
+      <div class="emergency-card">
+        <strong>U.S. Embassy Madrid</strong>
+        <span>+34 91 587 2200</span>
+      </div>
+      <div class="emergency-card">
+        <strong>State Dept. Emergency</strong>
+        <span>+1-202-501-4444</span>
+      </div>
+      <div class="emergency-card">
+        <strong>Palma Airport (PMI)</strong>
+        <span>+34 902 404 704</span>
+      </div>
+      <div class="emergency-card">
+        <strong>STEP Registration</strong>
+        <span>step.state.gov</span>
+      </div>
+    </div>
+    <p style="margin-top:28px; font-size:12px; opacity:0.45;">Built for Andy & Lynds · Mallorca, June 29–July 1 · Have an incredible trip 🌊</p>
+  </div>
+
+</div>
+
+<script>
+  function toggleCheck(el) {
+    el.classList.toggle('checked');
+  }
+
+  // Smooth scroll for nav pills
+  document.querySelectorAll('.nav-pill').forEach(pill => {
+    pill.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(pill.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>
