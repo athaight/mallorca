@@ -1548,7 +1548,8 @@
     // Optimistic update so the checkbox responds instantly
     el.classList.toggle('checked', nowChecked);
     // Then persist to Firebase (onValue will confirm/reconcile)
-    set(ref(db, 'todos/' + id), nowChecked || null);
+    set(ref(db, 'todos/' + id), nowChecked || null)
+      .catch(err => console.error('[Firebase] write failed:', err.code, err.message));
   };
 
   // Smooth scroll for nav pills
