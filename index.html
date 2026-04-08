@@ -1511,15 +1511,13 @@
 
 <!-- Firebase SDK (modular ESM — no bundler needed) -->
 <script type="module">
-  import { initializeApp }                     from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
-  import { getAnalytics }                      from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js';
-  import { getDatabase, ref, set, onValue }    from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';
+  import { initializeApp }                          from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+  import { getAnalytics, isSupported }              from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js';
+  import { getDatabase, ref, set, onValue }         from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';
 
   const firebaseConfig = {
     apiKey:            "AIzaSyALYvTwHcG6FNMLd3-b_1mc0TAnr7_bJAo",
     authDomain:        "mallorca-trip.firebaseapp.com",
-    // NOTE: You must enable Realtime Database in the Firebase console first.
-    // Build → Realtime Database → Create database → Start in test mode
     databaseURL:       "https://mallorca-trip-default-rtdb.firebaseio.com",
     projectId:         "mallorca-trip",
     storageBucket:     "mallorca-trip.firebasestorage.app",
@@ -1529,7 +1527,10 @@
   };
 
   const app = initializeApp(firebaseConfig);
-  getAnalytics(app);
+
+  // Analytics is optional — run async so it can never block the rest of the app
+  isSupported().then(yes => { if (yes) getAnalytics(app); });
+
   const db = getDatabase(app);
 
   // Real-time listener — syncs check state to all open browsers instantly
@@ -1544,7 +1545,9 @@
   window.toggleCheck = function(el) {
     const id = el.dataset.id;
     const nowChecked = !el.classList.contains('checked');
-    // Write true when checked, delete the key when unchecked
+    // Optimistic update so the checkbox responds instantly
+    el.classList.toggle('checked', nowChecked);
+    // Then persist to Firebase (onValue will confirm/reconcile)
     set(ref(db, 'todos/' + id), nowChecked || null);
   };
 
