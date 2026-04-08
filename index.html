@@ -1509,67 +1509,44 @@
 
 </div>
 
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<!-- Firebase SDK (modular ESM — no bundler needed) -->
+<script type="module">
+  import { initializeApp }                     from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';
+  import { getAnalytics }                      from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js';
+  import { getDatabase, ref, set, onValue }    from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';
 
-<script>
-  // ── Firebase config ──────────────────────────────────────────────────────
-  // Create a free project at https://console.firebase.google.com
-  // then paste your project's config object here.
   const firebaseConfig = {
-    apiKey:            "REPLACE_WITH_YOUR_API_KEY",
-    authDomain:        "REPLACE_WITH_YOUR_PROJECT.firebaseapp.com",
-    databaseURL:       "https://REPLACE_WITH_YOUR_PROJECT-default-rtdb.firebaseio.com",
-    projectId:         "REPLACE_WITH_YOUR_PROJECT_ID",
-    storageBucket:     "REPLACE_WITH_YOUR_PROJECT.firebasestorage.app",
-    messagingSenderId: "REPLACE_WITH_YOUR_SENDER_ID",
-    appId:             "REPLACE_WITH_YOUR_APP_ID"
+    apiKey:            "AIzaSyALYvTwHcG6FNMLd3-b_1mc0TAnr7_bJAo",
+    authDomain:        "mallorca-trip.firebaseapp.com",
+    // NOTE: You must enable Realtime Database in the Firebase console first.
+    // Build → Realtime Database → Create database → Start in test mode
+    databaseURL:       "https://mallorca-trip-default-rtdb.firebaseio.com",
+    projectId:         "mallorca-trip",
+    storageBucket:     "mallorca-trip.firebasestorage.app",
+    messagingSenderId: "1093403714303",
+    appId:             "1:1093403714303:web:1630e512225dde9d7ce2ca",
+    measurementId:     "G-TM2M2RVB38"
   };
 
-  const FIREBASE_CONFIGURED = !firebaseConfig.apiKey.startsWith("REPLACE");
+  const app = initializeApp(firebaseConfig);
+  getAnalytics(app);
+  const db = getDatabase(app);
 
-  let db = null;
-  if (FIREBASE_CONFIGURED) {
-    firebase.initializeApp(firebaseConfig);
-    db = firebase.database();
-
-    // Listen for real-time updates from Firebase and apply to all check-items
-    db.ref('todos').on('value', snapshot => {
-      const state = snapshot.val() || {};
-      document.querySelectorAll('.check-item[data-id]').forEach(el => {
-        el.classList.toggle('checked', !!state[el.dataset.id]);
-      });
+  // Real-time listener — syncs check state to all open browsers instantly
+  onValue(ref(db, 'todos'), snapshot => {
+    const state = snapshot.val() || {};
+    document.querySelectorAll('.check-item[data-id]').forEach(el => {
+      el.classList.toggle('checked', !!state[el.dataset.id]);
     });
-  } else {
-    // Fallback: localStorage so state at least persists per browser
-    const saved = JSON.parse(localStorage.getItem('mallorca-todos') || '{}');
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.check-item[data-id]').forEach(el => {
-        if (saved[el.dataset.id]) el.classList.add('checked');
-      });
-    });
-  }
+  });
 
-  function toggleCheck(el) {
+  // Exposed globally so onclick="toggleCheck(this)" in the HTML still works
+  window.toggleCheck = function(el) {
     const id = el.dataset.id;
     const nowChecked = !el.classList.contains('checked');
-
-    if (FIREBASE_CONFIGURED && db) {
-      // Firebase is the source of truth — the onValue listener will update the UI
-      db.ref('todos/' + id).set(nowChecked || null);
-    } else {
-      // localStorage fallback
-      el.classList.toggle('checked');
-      const saved = JSON.parse(localStorage.getItem('mallorca-todos') || '{}');
-      if (nowChecked) {
-        saved[id] = true;
-      } else {
-        delete saved[id];
-      }
-      localStorage.setItem('mallorca-todos', JSON.stringify(saved));
-    }
-  }
+    // Write true when checked, delete the key when unchecked
+    set(ref(db, 'todos/' + id), nowChecked || null);
+  };
 
   // Smooth scroll for nav pills
   document.querySelectorAll('.nav-pill').forEach(pill => {
